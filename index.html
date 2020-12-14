@@ -3,53 +3,54 @@
   <head>
     <meta charset="utf-8">
     <title>ITtraining</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
-    <link rel="stylesheet" type="text/css" href="css/estils.css" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="./css/estils.css" />
   </head>
-<!--HOLA-->
+
   <body>
     <header>
       <span class="vermell">IT</span>
       <span class="groc">training</span>&nbsp;
-      <span class="verd">Lorem</span>
+      <span class="verd">SQL</span>
     </header>
 
     <main>
       <article>
-        <form>
+        <form name="formulari">
 
-          <section id="pregunta-1">
+          <section class="elementVisible" id="pregunta-1">
             <h2>Pregunta #1</h2>
             <div class="enunciat">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce hendrerit diam vitae urna pulvinar commodo. Suspendisse tristique eu justo in dignissim. Phasellus ut nibh ornare, porttitor sapien a, eleifend massa?</p>
+              <p>Quines són les clausules obligatòries a una comanda SQL?</p>
             </div>
             <div class="respostes">
               <div>
-                <input type="radio" id="exemple-1-1" />
+                <input type="radio" id="resp_1_1" value="PrimeraOpcio" name="resposta1" onclick="pregunta(this)"/>
                 &nbsp;&nbsp;
-                <label for="exemple-1">Lorem ipsum dolor sit amet</label>
+                <label onclick="pregunta(this)">SELECT</label>
               </div>
               <div>
-                <input type="checkbox" id="exemple-1-2" />
+                <input type="radio" id="resp_1_2" value="SegonaOpcio"  name="resposta1" onclick="pregunta(this)"/>
                 &nbsp;&nbsp;
-                <label for="exemple-2">Lorem ipsum dolor sit amet</label>
+                <label onclick="pregunta(this)">FROM</label>
               </div>
               <div>
-                <input type="text" id="exemple-1-3" name="resposta-1" placeholder="Lorem ipsum dolor sit amet" />
+                <input type="radio" id="resp_1_3" value="TerceraOpcio" name="resposta1" onclick="pregunta(this)"/>
+                &nbsp;&nbsp;
+                <label onclick="pregunta(this)">SELECT i FROM</label>
               </div>
               <div>
-                <select id="exemple-1-4">
-                  <option>Lorem ipsum dolor sit amet</option>
-                  <option>Lorem ipsum dolor sit amet</option>
-                  <option>Lorem ipsum dolor sit amet</option>
-                  <option>Lorem ipsum dolor sit amet</option>
-                </select>
+                <input type="radio" id="resp_1_4" value="QuartaOpcio" name="resposta1" onclick="pregunta(this)"/>
+                &nbsp;&nbsp;
+                <label onclick="pregunta(this)">SELECT, FROM i WHERE</label>
               </div>
             </div> <!-- FINAL <div class="respostes">-->
-            <button>Següent >></button>
+            <button type="button" id="boto-1" value="boto-1" onclick="passaSeguent(this)">Següent >></button>
+             <!-- disabled -->
+             <!-- <button onmouseover="encima()" onmouseout="fuera()"  type="button" id="boto-1" onclick="mostrar_3();"></button> -->
           </section> <!-- FINAL <section id="pregunta-#"> -->
 
-          <section id="pregunta-2">
+          <section class="elementOcult" id="pregunta-2">
             <h2>Pregunta #2</h2>
             <div class="enunciat">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce hendrerit diam vitae urna pulvinar commodo. Suspendisse tristique eu justo in dignissim. Phasellus ut nibh ornare, porttitor sapien a, eleifend massa?</p>
@@ -80,7 +81,7 @@
             <button>Següent >></button>
           </section>  <!-- FINAL <section id="pregunta-#"> -->
 
-          <section id="pregunta-3">
+          <section class="elementOcult" id="pregunta-3">
             <h2>Pregunta #3</h2>
             <div class="enunciat">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce hendrerit diam vitae urna pulvinar commodo. Suspendisse tristique eu justo in dignissim. Phasellus ut nibh ornare, porttitor sapien a, eleifend massa?</p>
@@ -111,7 +112,7 @@
             <button>Següent >></button>
           </section>  <!-- FINAL <section id="pregunta-#"> -->
 
-          <section id="pregunta-4">
+          <section class="elementOcult" id="pregunta-4">
             <h2>Pregunta #4</h2>
             <div class="enunciat">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce hendrerit diam vitae urna pulvinar commodo. Suspendisse tristique eu justo in dignissim. Phasellus ut nibh ornare, porttitor sapien a, eleifend massa?</p>
@@ -149,5 +150,6 @@
     <footer>
       <span class="vermell">Designed and developed by DAW2© 2020-2021 All rights reserved</span>
     </footer>
+    <script src="./js/preguntes.js"></script>
   </body>
 </html>
